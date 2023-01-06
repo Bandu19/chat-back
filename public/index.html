@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniChat</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+</head>
+
+<body class="container">
+
+    <h1 class="mt-5">Acceso denegado</h1>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js"
+        integrity="sha512-VJ6+sp2E5rFQk05caiXXzQd1wBABpjEj1r5kMiLmGAAgwPItw1YpqsCCBtq8Yr1x6C49/mTpRdXtq8O2RcZhlQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // Del lado del cliente
+        // Conectar con el backend 
+        // const socket = io('http://192.168.10.182:8080') // PARA MOBILE
+        const socket = io('http://localhost:8080')
+        // const socket = io('https://reac-tickets-server.herokuapp.com/')
+
+        // Aqui, van a obtener las bandas
+
+        socket.on('ticket-asignado', (bands) => {
+            console.log(bands)
+        })
+
+
+    </script>
+</body>
+
+</html>
